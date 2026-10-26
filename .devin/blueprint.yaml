@@ -1,0 +1,15 @@
+initialize: |
+  # Node is preinstalled under nvm but not on PATH
+  echo "PATH=$HOME/.nvm/versions/node/v24.19.0/bin:$PATH" >> $ENVRC
+maintenance: |
+  npm install
+knowledge:
+  - name: lint
+    contents: |
+      npm run lint   # oxlint
+  - name: build
+    contents: |
+      npm run build  # tsc -b && vite build
+  - name: dev
+    contents: |
+      npm run dev    # vite dev server
